@@ -1,0 +1,15 @@
+name: Hello World Workflow
+
+on: [push] # This workflow runs on every push to any branch
+
+jobs:
+  build:
+    name: Print Hello World
+    runs-on: ubuntu-latest # Specifies the runner environment
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4 # Action to check out your repository code
+
+      - name: Say hello
+        run: echo "Hello, world!" # Command to execute
